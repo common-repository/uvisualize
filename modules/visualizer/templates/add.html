@@ -1,0 +1,17 @@
+<div class="uvisWrap ngdialog-message" ng-controller="uvisAddPopup">
+    <div class="uvisHeader">
+        <h1>UVisualize!</h1>
+    </div>
+    <div class="uvisBody uvisPage modal-body">
+        <h2>{{ 'Name your visualization'|translate }}</h2>
+        <form name="uvisAddForm">
+          <input id="uvisTitle" name="uvisTitle" type="text" ng-model="uvisTitle" required uvis-enter="save()" placeholder="{{ 'Please give a title'| translate }}" />
+          <span class="error" ng-show="uvisAddForm.uvisTitle.$error.required">{{ 'Required!'|translate }}</span><br />
+        </form>
+        <div ng-include="error"></div>
+    </div>
+    <div class="uvisFooter ngdialog-buttons">
+        <button class="button button-primary" ng-click="save()" ng-disabled="uvisAddForm.$invalid" ng-show="!error">{{ 'Add'|translate }}</button>
+        <button class="button button-secondary ngdialog-button" ng-click="closeThisDialog()">{{ 'Cancel'|translate }}</button>
+    </div>
+</div>

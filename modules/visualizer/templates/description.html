@@ -1,0 +1,16 @@
+<div id="viewDescription">
+  <form name="uvisDescription">
+    <label for="uvisTitle">{{ 'Title'|translate }}</label><br />
+    <input id="uvisTitle" name="uvisTitle" type="text" ng-model="uvisData.config.uvis_post_title" required placeholder="{{ 'Please give a title'|translate }}">
+    <span class="error" ng-show="uvisSettings.uvisTitle.$error.required">{{ 'Required!'|translate }}</span><br>
+    <label for="uvisDescription">{{ 'Description'|translate }}</label><br />
+    <textarea id="uvisDescription" name="uvisDescription" class="uvisDescription" type="text" ng-model="uvisData.config.uvis_post_content" required placeholder="{{ 'Please add a description'|translate }}"></textarea>
+  </form>
+  <div class="uvisFormStatus">{{ 'Status'|translate }}: {{ uvisData.config.uvis_post_status }}</div>
+  <!-- FIXME: no date_modified in array??? -->
+  <div class="uvisFormStatus">{{ 'Last modified'|translate }}: {{ uvisData.config.uvis_post_modified || "missing" }}</div>
+  <div class="debug">
+    <div ng-repeat="geo in uvisData.items" ng-show="geo.geo_latitude">[{{ geo.geo_latitude }}, {{ geo.geo_longitude }}]</div>
+  </div>
+
+</div>

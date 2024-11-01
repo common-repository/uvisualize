@@ -1,0 +1,9 @@
+<div class="uvisError">
+  <div class="uvisErrorMsg error" ng-repeat="err in errorMsgs">
+    <h2>{{ 'Error'|translate }} {{ err.id }}</h2>
+    {{ err.error_msg }}
+  </div>
+  <p>
+    <button class="button button-primary" ng-click="closeThisDialog()" ng-show="errorCancel" ng-bind="errorButtonText || {{ 'Close|translate' }}"></button>
+  </p>
+</div>

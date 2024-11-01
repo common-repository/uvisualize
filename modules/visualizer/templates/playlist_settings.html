@@ -1,0 +1,58 @@
+<div id="viewPlaylistFilters" ng-controller="uvisPlaylistFiltersController">
+  <form name="uvisPlaylistFiltersForm">
+
+    <h4>{{ 'Playlist'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Change the design of your playlist. Make sure &quot;Show playlist&quot; is clicked to see the results'|translate }}">?</div></h4>
+
+    <input id="uvis_playlist_display" type="checkbox" ng-model="uvisData.config.uvis_playlist_display" />
+    <label for="uvis_playlist_display" uvis-tooltip="{{ 'Show the playlist to the visitor at the selected screen position'|translate }}">{{ 'Show Playlist'|translate }}</label>
+    <select id="uvis_playlist_position"
+            ng-model="uvisData.config.uvis_playlist_position"
+            ng-options="value for (key , value) in playlistPositions"
+            uvis-tooltip="{{ 'Where to display the playlist?'|translate }}"
+            >
+    </select>
+    <br />
+    <input id="uvis_animation_playbuttons" type="checkbox" ng-model="uvisData.config.uvis_animation_playbuttons" ng-disabled="uvisData.config.uvis_animation_autoplay" />
+    <label for="uvis_animation_playbuttons" uvis-tooltip="{{ 'Display the backward, play and forward buttons'|translate }}" ng-class="{disabled:uvisData.config.uvis_animation_autoplay}">{{ 'Show playback controls'|translate }}</label>
+    <br />
+
+    <label uvis-tooltip="{{ 'Select a background color for the playlist'|translate }}">{{ 'Background color'|translate }}</label>
+    <div class="colorPickerField">
+      <input uvis-colorpicker type="text" id="uvis_playlist_background_color" ng-model="uvisData.config.uvis_playlist_background_color" ng-change="updatePlaylistColor()" class="colorPicker" />
+    </div>
+    <br />
+
+    <label uvis-tooltip="{{ 'Select a text color for the playlist'|translate }}">{{ 'Text color'|translate }}</label>
+    <div class="colorPickerField">
+      <input uvis-colorpicker type="text" id="uvis_playlist_text_color" ng-model="uvisData.config.uvis_playlist_text_color" ng-change="" class="colorPicker" />
+    </div>
+    <br />
+
+  </form>
+
+  <form name="uvisAnimation">
+
+    <h4>{{ 'Animation'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Auto-animate your playlist: Skip automatically from one item to the next one using a transition effect and a delay'|translate }}">?</div></h4>
+
+    <input id="uvis_animation_autoplay" type="checkbox" ng-model="uvisData.config.uvis_animation_autoplay" />
+    <label for="uvis_animation_autoplay" uvis-tooltip="{{ 'Automatically skip from one playlist item to the next after the delay set below'|translate }}">{{ 'Auto-animate playlist'|translate }}</label>
+    <br />
+    <!--
+    <label for="uvis_animation_effect" uvis-tooltip="{{ 'When skipping to a playlist item this transition effect will be used'|translate }}">{{ 'Transition effect'|translate }}</label>
+    <select id="uvis_animation_effect"
+        ng-model="uvisData.config.uvis_animation_effect"
+        ng-options="o as o for o in ['switch','slide','swing']">
+    </select>
+    <br />-->
+    <label for="uvis_animation_delay" uvis-tooltip="{{ 'Skip to the next playlist item after this period of time (if playlist is auto-animated or after the play button was pressed)'|translate }}">{{ 'Delay (ms)'|translate }}</label>
+    <input id="uvis_animation_delay" type="number" min="500" step="100"
+        ng-model="uvisData.config.uvis_animation_delay" />
+    <br />
+    <input
+      id="uvis_attachment_autoplay"
+      type="checkbox"
+      ng-model="uvisData.config.uvis_attachment_autoplay" />
+    <label for="uvis_attachment_autoplay" uvis-tooltip="{{ 'Start playing audios and videos automatically when they are displayed'|translate }}">{{ 'Autoplay audios and videos'|translate }}</label>
+
+  </form>
+</div>

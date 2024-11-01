@@ -1,0 +1,81 @@
+<div class="uvisBody uvisWelcomeScreen clearfix">
+
+  <div class="uvisSteps clearfix">
+
+    <div class="col-md-4">
+      <div class="uvisNo"><span>1</span></div>
+      <div class="uvisNoText">
+        <h3>{{ 'Tell your story'|translate }}</h3>
+        <p translate>Use the Story Editor to describe your playlist items and narrate your own story of the content presented.<br />
+          What you write will replace the original post content shown to the visitor.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="uvisNo"><span>2</span></div>
+      <div class="uvisNoText">
+        <h3>{{ 'Choose your visualization'|translate }}</h3>
+        <p translate>Click on a module above and a <span class="dashicons dashicons-yes"></span> will appear.<br />
+          It indicates that you selected this module for saving.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="uvisNo"><span>3</span></div>
+      <div class="uvisNoText">
+        <h3>{{ 'Configure your visualization'|translate }}</h3>
+        <p translate>Change the behaviour and appearance.<br />
+          Use combination of these settings to fit the purpose of your presentation. What you see is what you get!</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <h2>{{ 'Installed visualization modules'|translate }}</h2>
+
+  <div class="col-md-3">
+    <div class="uvisCol">
+      <h3>Visualizer</h3>
+      <img ng-src="{{uvisurlbase}}modules/visualizer/images/visualizer.jpg" />
+      <p translate>Provides the visualization framework and the Story Editor.</p>
+    </div>
+  </div>
+
+  <div ng-model="activeModules"
+       ng-repeat="(key, value) in uvisData.active_modules"
+       class="col-md-3"
+  >
+    <div class="uvisCol clickable" ng-click="onClickModule(value.id)" ng-cloak>
+      <h3>{{ value.title | translate }}</h3>
+      <img ng-src="{{ uvisurlbase }}modules/{{ value.id }}/images/{{ value.id }}.jpg?id={{ value.id }}" />
+      <p translate ng-bind-html="renderHtml(value.description)"></p>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <h2 translate>Help &amp; documentation</h2>
+
+  <div class="col-md-12">
+
+    <p>
+      <a href="http://cba.fro.at/uvisualize">UVisualize! Plugin Website</a> &middot; <a href="http://cba.fro.at/uvisualize-tutorial" translate>Tutorials</a><br />
+    </p>
+    <div class="uvisLogos clearfix">
+      {{ 'Created by'|translate }}
+      <a href="http://www.livingarchives.eu" target="_blank"><img ng-src="{{uvisurlbase}}images/logo_livingarchives.gif" title="Creative Approaches to Living Cultural Archives" /></a>
+      <a href="http://cba.fro.at" target="_blank"><img ng-src="{{uvisurlbase}}images/logo_cba.gif" title="CBA - Cultural Broadcasting Archive" /></a>
+      <a href="http://www.fro.at"><img ng-src="{{uvisurlbase}}images/logo_fro.gif" target="_blank" title="Radio FRO 105.0 MHz" /></a>
+      <br />
+      {{ 'Funded by'|translate }}
+      <img ng-src="{{uvisurlbase}}images/logo_euculture.gif" title="EU Culture" />
+      <img ng-src="{{uvisurlbase}}images/logo_bka.gif" title="Bundeskanzleramt &Ouml;sterreich - Kultur" />
+      <img ng-src="{{uvisurlbase}}images/logo_landooe.gif" title="Federal Government of Upper Austria" />
+      <img ng-src="{{uvisurlbase}}images/logo_linzkultur.gif" title="City of Linz - Culture" />
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="uvisPlaylistContainer" uvis-playlist ng-controller="uvisPlaylistController">
+    <div class="uvisPlaylist" uvis-draggable ng-class="'uvis' + uvisData.config.uvis_playlist_position" ng-show="uvisData.config.uvis_playlist_display">
+
+      <div class="uvisPlaylistHeader uvisDraggableHandle uvis{{uvisData.config.uvis_playlist_position}}">
+        <h5>{{ uvisData.playlist.post_title }}</h5>
+
+        <div class="uvisPlaylistControls noselect" ng-class="{ autoplay:uvisData.config.uvis_animation_autoplay }" ng-show="uvisData.config.uvis_animation_playbuttons || uvisData.config.uvis_animation_autoplay">
+          <div class="uvisBck" ng-click="previous()"></div>
+          <div class="uvisPlay" ng-click="play()" ng-show="uvisPlay === false && uvisData.config.uvis_animation_autoplay"></div>
+          <div class="uvisPause" ng-click="pause()" ng-show="uvisPlay === true && uvisData.config.uvis_animation_autoplay"></div>
+          <div class="uvisFwd" ng-click="next()"></div>
+          <div class="uvisProgress" id="uvisProgress" ng-show="uvisData.config.uvis_animation_autoplay">
+            <div class="uvisProgressBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="uvisPlaylistItems">
+          <div ng-repeat="item in uvisData.PLItemsProcessed" uvis-playlist-item ng-click="select(item)" class="uvisPlaylistItem" data-id="{{ item.ID }}">
+            <span class="dashicons dashicons-location uvisMapMarkerSmall alignright" ng-show="item.geo_latitude && uvisData.config.uvis_module == 'map'" uvis-tooltip="{{ 'This post has geo data'|translate }}"></span>
+            {{ item.title || item.post_title}}
+          </div>
+      </div>
+    </div>
+
+</div>

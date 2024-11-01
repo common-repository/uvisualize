@@ -1,0 +1,29 @@
+<div ng-controller="uvisTimelineSettingsController">
+
+  <div class="uvisTimelineSettings">
+
+    <h4>{{ "Timeline"|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Change the behaviour of the timeline'|translate }}">?</div></h4>
+
+    <input id="uvis_timeline_display" type="checkbox" ng-model="uvisData.config.uvis_timeline_display" ng-change="changeSettings()">
+    <label for="uvis_timeline_display" uvis-tooltip="{{ 'Whether to display the timeline or just a slideshow'|translate }}">{{ 'Display timeline? (Otherwise slideshow)'|translate }}</label>
+    <br />
+
+    <label for="uvis_timeline_direction">{{ 'Start by'|translate }}</label>
+    <select ng-model="uvisData.config.uvis_timeline_direction"
+            ng-options="value for (key , value) in timelineDirection"
+            required
+            >
+    </select>
+    <br />
+
+    <label for="uvis_timeline_orderby">{{ 'Order items by'|translate }}</label>
+    <select ng-model="uvisData.config.uvis_timeline_orderby"
+            ng-options="value for (key , value) in timelineOrder"
+            ng-change="changeSettings()"
+            required
+            >
+    </select>
+
+  </div>
+
+</div>

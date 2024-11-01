@@ -1,0 +1,50 @@
+<!-- 
+    Angular base template for the actual visualization.
+    If you use a 3rd party tool to render your data you should 
+    process the playlist in the render.js factory api instead and
+    just make this a simple wrapper to inject a map, graph, whatever.
+    Uses "uvisExampleController" as defined in js/render.js
+-->
+<div id="uvisExample" class="uvisModule" ng-controller="uvisExampleController">
+    <div id="uvisExampleContainer">
+        <!-- currentItem is available as soon as a playlist item has been selected -->
+        <div ng-if="uvisData.currentItem">
+            <!-- 
+                getTitle, getDate, getPermalinkHTML, getContentHTML are functions of the playlist api.
+                They take care of any content and property settings.
+            -->
+            <h2 ng-bind="PL.getTitle(uvisData.currentItem)"></h2>
+            <div ng-bind="PL.getDate(uvisData.currentItem)"></div>
+            <!-- ng-bind-html must be used if HTML needs to be rendered safely -->
+            <div ng-bind-html="PL.getPermalinkHTML(uvisData.currentItem)"></div>
+            <div ng-bind-html="PL.getContentHTML(uvisData.currentItem)"></div>
+            <!-- 
+                The player directive renders the player on a given playlist item.
+                Also content settings like attachment display true/false are handled automatically.
+            -->
+            <div uvis-player="uvisData.currentItem" uvis-item="uvisData.currentItem"></div>
+        </div>
+        <hr />
+        <div>
+            <strong>All Items:</strong>
+            <!-- 
+                uvisData.PLItemsProcessed: an array of all playlist items sorted and filtered.
+                also usefull:
+                uvisData.PLItemsOrigSorting: unprocessed list of all items
+                uvisData.PLItems: all playlist items in an object with the ID as the key
+            -->
+            <span ng-repeat="item in uvisData.PLItemsProcessed" class="item" ng-class="{'current':item === uvisData.currentItem}" ng-click="PL.select(item)">
+                {{ item.ID }}
+            </span>
+        </div>
+        <!-- testing the colorpicker whith ng-style -->
+        <div style="width:50px; height:50px" ng-style="{'background-color': uvisData.config.uvis_example_color }">Color Picker</div>
+
+    </div>
+</div>
+
+<!-- Include the playlist template if needed -->
+<div ng-include="uvisPlaylist"></div>
+
+<!-- Include the filter template if needed -->
+<div ng-include="uvisFilters"></div>

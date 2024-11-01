@@ -1,0 +1,82 @@
+<div id="uvisMapSettings" ng-controller="uvisMapSettingsController">
+
+
+    <h4>{{ "Map"|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Change the design and behaviour of the map'|translate }}">?</div></h4>
+
+    <div class="uvisMapSettings">
+      <label for="selectedBasemap" uvis-tooltip="{{ 'Select a map which fits your presentation best'|translate }}">{{ 'Basemap'|translate }}</label>
+      <select
+        id="selectedBasemap"
+        ng-model="selectedBasemap"
+        ng-options="map.title for map in uvisData.basemaps"
+        ng-change="onMapSelect()"
+        uvis-tooltip="{{ 'Select a map which fits your presentation best'|translate }}"
+      ></select>
+      <br />
+
+      <label uvis-tooltip="{{ 'Select a default icon for each marker'|translate }}">{{ 'Marker icon'|translate }}</label>
+      <select
+        id="uvis_map_default_marker_icon"
+        ng-model="uvisData.config.uvis_map_default_marker_icon"
+        ng-options="item as item.iconID for item in uvisData.map_marker_icons"
+        ng-change="updateMapColor()"
+        style="text-transform:capitalize;"
+        />
+      </select>
+      <br />
+
+      <label uvis-tooltip="{{ 'Select a color for each marker'|translate }}">{{ 'Marker color'|translate }}</label>
+      <div class="colorPickerField">
+        <input uvis-colorpicker type="text" id="uvis_map_default_marker_color" ng-model="uvisData.config.uvis_map_default_marker_color" ng-change="updateMapColor()" class="colorPicker" />
+      </div>
+      <br />
+
+      <input id="cluster_markers" type="checkbox" ng-model="uvisData.config.uvis_map_cluster_markers" ng-change="updateClusterMarkers()">
+      <label for="cluster_markers" uvis-tooltip="{{ 'Put markers into a cluster if they are very close to each other'|translate }}">{{ 'Spiderfy clustered markers'|translate }}</label>
+      <br />
+
+      <h4>{{ 'Popup box'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Change the design of the popup which appears after clicking a marker. Make sure to click on a marker to see the results'|translate }}">?</div></h4>
+
+      <label uvis-tooltip="{{ 'Select a background color for each marker popup box'|translate }}">{{ 'Box background'|translate }}</label>
+      <div class="colorPickerField">
+        <input uvis-colorpicker type="text" id="uvis_map_default_box_background_color" ng-model="uvisData.config.uvis_map_default_box_background_color" ng-change="updateMapColor()" class="colorPicker" />
+      </div>
+      <br />
+
+      <label uvis-tooltip="{{ 'Select a border color for each marker popup box'|translate }}">{{ 'Box border color'|translate }}</label>
+      <div class="colorPickerField">
+        <input uvis-colorpicker type="text" id="uvis_map_default_box_border_color" ng-model="uvisData.config.uvis_map_default_box_border_color" ng-change="updateMapColor()" class="colorPicker" />
+      </div>
+      <br />
+
+      <label uvis-tooltip="{{ 'Select a font color for the popup box'|translate }}">{{ 'Font color'|translate }}</label>
+      <div class="colorPickerField">
+        <input uvis-colorpicker type="text" id="uvis_map_default_font_color" ng-model="uvisData.config.uvis_map_default_font_color" ng-change="updateMapColor()" class="colorPicker" />
+      </div>
+      <br />
+
+      <label for="uvis_map_default_font" uvis-tooltip="{{ 'Select a font'|translate }}">{{ 'Font'|translate }}</label>
+      <select
+        id="uvis_map_default_font"
+        ng-model="uvisData.config.uvis_map_default_font"
+        ng-options="value for (key , value) in mapFonts"
+        ng-change="updateMapColor()"
+        uvis-tooltip="{{ 'Select a font'|translate }}"
+      ></select>
+
+    </div>
+
+    <h4>{{ 'Initial position'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'The map will start at the same position and zoom level in which you save it. Drag the map to the initial position and zoom level you want the presentation to start with and press Save.'|translate }}">?</div></h4>
+
+    <input id="uvis_playlist_display" type="checkbox" ng-model="uvisData.config.uvis_map_autocenter" ng-change="updateClusterMarkers()" />
+    <label for="uvis_playlist_display" uvis-tooltip="{{ 'Automatically zoom to all visible markers'|translate }}">{{ 'Auto Zoom Map'|translate }}</label>
+    <br />
+
+    <label>{{ 'Position'|translate }}</label>
+    <input type="text" disabled="disabled" class="disabled" value="{{uvisData.config.uvis_map_pos}}" />
+    <br />
+
+    <label>{{ 'Zoom level'|translate }}</label>
+    <input type="text" disabled="disabled" class="disabled" value="{{uvisData.config.uvis_map_zoom}}" />
+
+</div>

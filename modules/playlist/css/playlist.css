@@ -1,0 +1,393 @@
+/**
+ * Styles for creating and displaying playlists in the frontend and backend.
+ * Used for the playlist dropdown and the backend's edit playlists screen
+ */
+
+.sort-placeholder {
+  background-color:#FFFBCC !important;
+  margin:20px 0px 20px 0px;
+}
+
+.ui-sortable-helper {
+  -moz-box-shadow:0px 0px 4px 1px #333;
+  -webkit-box-shadow:0px 0px 4px 1px #333;
+  box-shadow:0px 0px 4px 1px #333;
+  opacity:0.85;
+  filter:alpha(opacity=85); /* For IE8 and earlier */
+}
+
+/* jQuery Dialog Styles */
+
+.ui-dialog {
+  z-index:99999;
+  overflow:hidden;
+  position:fixed;
+  margin:5% auto;
+  top:0;
+  left:0;
+  right:0;
+  padding:0;
+  outline: 0;
+  background-color:white;
+  border:1px solid #ccc;
+  -moz-box-shadow:0px 0px 5px 1px #ccc;
+  -webkit-box-shadow:0px 0px 5px 1px #ccc;
+  box-shadow:0px 0px 5px 1px #ccc;
+}
+.ui-dialog .ui-dialog-titlebar {
+  display:block;
+  padding: .4em 1em;
+  position: relative;
+  background-color: #f6f6f6;
+  background-image: -webkit-gradient(
+     linear,
+     left top,
+     left bottom,
+     color-stop(0, #FFFFFF),
+     color-stop(0, #FFFFFF),
+     color-stop(0.5, #EDEDED)
+  );
+  background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 0%, #EDEDED 50%);
+  background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 0%, #EDEDED 50%);
+  background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 0%, #EDEDED 50%);
+  background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 0%, #EDEDED 50%);
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 0%, #EDEDED 50%);
+}
+.ui-dialog .ui-dialog-title {
+  margin: .1em 0;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:#777;
+  text-shadow:1px 1px 1px #fff;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  position: absolute;
+  right: .3em;
+  top: 50%;
+  width: 20px;
+  margin: -10px 0 0 0;
+  padding: 1px;
+  height: 20px;
+  background:url(../images/btn-close.png) no-repeat;
+  overflow:hidden;
+}
+.ui-dialog .ui-dialog-content {
+  position: relative;
+  border: 0;
+  padding: 1.5em 1.5em;
+  background: none;
+  overflow: auto;
+  font-size:12px;
+}
+.ui-dialog-content input, .ui-dialog-content label {
+}
+.ui-dialog-content input {
+  border:1px solid #ccc;
+  padding:5px;
+  width:100%;
+}
+.ui-dialog .ui-dialog-buttonpane {
+  text-align: left;
+  border-width: 1px 0 0 0;
+  background-image: none;
+  margin-top: .5em;
+  padding: .3em 1em .5em .4em;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  float: right;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+  margin: .5em .4em .5em 0;
+  cursor: pointer;
+}
+.ui-dialog .ui-resizable-se {
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  bottom: -5px;
+  background-position: 16px 16px;
+}
+
+.uvisWrapInclude .button-primary:focus,
+.uvisWrapInclude .button-primary:hover,
+.uvisViewer .button-primary:focus,
+.uvisViewer .button-primary:hover {
+  background: #1E8CBE none repeat scroll 0% 0%;
+  border-color: #0074A2;
+  box-shadow: 0px 1px 0px rgba(120, 200, 230, 0.6) inset;
+  color: #FFF !important;
+}
+.uvisWrapInclude .button,
+.uvisWrapInclude .button-primary,
+.uvisWrapInclude .button-secondary,
+.uvisViewer .button,
+.uvisViewer .button-primary,
+.uvisViewer .button-secondary {
+  background: #2EA2CC none repeat scroll 0% 0%;
+  border-color: #0074A2;
+  box-shadow: 0px 1px 0px rgba(120, 200, 230, 0.5) inset, 0px 1px 0px rgba(0, 0, 0, 0.15);
+  text-shadow:none !important;
+  color: #FFF !important;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 26px;
+  height: 28px;
+  margin: 0px;
+  padding: 0px 10px 1px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+
+#playlist-items li {
+  border-top:1px solid #999;
+  line-height:normal;
+  margin:0px;
+}
+
+.playlist-item-handle {
+  cursor:move;
+  clear:both;
+  list-style-type:none;
+}
+
+/* Alert window */
+#uvis-notification {
+  display:none;
+  z-index:9999999;
+  position:fixed;
+  width:300px;
+  left:50%;
+  margin-left:-150px;
+  top:33%;
+  padding: 40px 0px 40px 0px;
+  -moz-box-shadow:0px 0px 5px 1px #ccc;
+  -webkit-box-shadow:0px 0px 5px 1px #ccc;
+  box-shadow:0px 0px 5px 1px #ccc;
+  background-color:#FFFBCC;
+  text-align:center;
+  vertical-align:middle;
+  font-size:2em;
+  font-weight:bold;
+}
+
+#uvis-dialog-create-playlist, #uvis-dialog-manage-playlist, #uvis-dialog-delete-playlist {
+  display:none;
+}
+
+#uvis-playlist-image {
+  float:left;
+  padding-right:20px;
+}
+
+h4#uvis-playlist-title {
+  margin-bottom:20px;
+}
+
+.playlist-item, .sort-placeholder {
+  display:block;
+  clear:both;
+  padding:10px;
+  border:1px solid #ddd;
+  height:60px;
+  margin-bottom:10px;
+  font-size:11px;
+  border-radius:5px;
+}
+
+.sort-placeholder {
+  border:2px dashed #ccc;
+}
+
+.playlist-item {
+  background-color:#fff;
+}
+
+.playlist-item-id, .playlist-item-post-date {
+  float:left;
+  width:10%;
+}
+
+.playlist-item-title {
+  float:left;
+  width:65%;
+  font-size:1.2em;
+}
+
+.playlist-item-options {
+  float:right;
+  width:15%;
+  text-align:right;
+  clear:right;
+  height:auto;
+}
+.playlist-item-options div {
+  cursor:pointer;
+  font-size:1.5em;
+  display:inline;
+  color:#555;
+  padding:5px;
+}
+
+.uvis-btn-manage-playlist {
+  cursor:pointer;
+  padding-right:5px;
+}
+
+.uvis-btn-manage-playlist img {
+  margin-top:5px;
+}
+
+.uvis-dropdown {
+  list-style-type: none;
+}
+
+.dropdown {
+  position:absolute;
+}
+
+.dropdown-menu {
+  min-width:300px;
+  padding:10px 0px 5px 0px;
+}
+
+.dropdown-menu div:hover {
+  background-color:#eee;
+}
+
+.dropdown-menu div {
+  padding-right:5px;
+}
+
+.dropdown-menu div a {
+  padding:4px 0px 4px 20px;
+  color:#262626 !important;
+}
+
+a.uvis-add-to-playlist {
+  width:84%;
+}
+
+.dropdown-menu a, .uvis-add-to-playlist-after {
+  text-align:left;
+  font-size:11px;
+  line-height:normal;
+}
+
+.uvis-loading {
+  text-align:center;
+  padding:5px;
+}
+
+.uvis-loading-center {
+  position:absolute;
+  top:50%;
+  bottom:50%;
+  left:50%;
+  right:50%;
+}
+
+}
+
+.uvis-dropdown {
+  border:none;
+}
+
+
+
+/* THEME STYLES ONLY */
+
+
+/**
+ * Styles for archive-uvis_playlist.php
+ * List of playlists
+ */
+
+.uvis-playlist-row {
+  margin-bottom:1em;
+  padding:1em;
+}
+
+.uvis-playlist-row img.wp-post-image {
+  float:left;
+  padding:0 5px 5px 0;
+}
+
+.uvis-playlist-row h2 {
+  font-size:1.5em;
+}
+
+.uvis-playlist-row .uvis-playlist-number-items {
+  color:#333;
+}
+
+
+/**
+ * Styles for single-uvis_playlist.php
+ * List of playlist items
+ * (When using the theme function uvis_the_playlist_items())
+ */
+
+.uvis-the-playlist-items {
+  padding:.5em 1em 1em 0;
+}
+
+.uvis-playlist-item {
+  border-bottom:1px solid #ddd;
+}
+
+.uvis-playlist-item a {
+  text-decoration:none !important;
+}
+
+.uvis-playlist-item span, .uvis-vis-row span {
+  display:inline-table;
+  padding:5px;
+  vertical-align:middle;
+  font-size:.8em;
+}
+
+.uvis-playlist-item-title {
+  width:80%;
+}
+
+.uvis-playlist-item-date {
+  float: right;
+  clear: both;
+  font-size:0.8em;
+}
+
+h2.uvis-headline {
+  margin:20px 0px;
+}
+
+
+/**
+ * Styles for in single-uvis_playlist.php
+ * List of visualizations to a playlist
+ * (When using the theme function uvis_the_visualizations( $playlist_id ))
+ */
+
+.uvis-the-visualizations {
+  padding:.5em 1em 1em 0;
+}
+
+.uvis-vis-row {
+  margin-bottom:20px;
+  font-size:1em;
+}
+.uvis-vis-icon {
+  font-size:inherit;
+  line-height:inherit;
+}
+.uvis-vis-title {
+  cursor:pointer;
+  width:50%;
+}

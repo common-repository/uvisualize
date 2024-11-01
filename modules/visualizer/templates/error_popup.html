@@ -1,0 +1,11 @@
+<div class="uvisWrap ngdialog-message" ng-controller="uvisAppController">
+    <div class="uvisHeader">
+        <h1>UVisualize!</h1>
+    </div>
+    <div class="uvisBody uvisPage modal-body">
+        <div ng-include="error"></div>
+    </div>
+    <div class="uvisFooter ngdialog-buttons">
+        <button class="button button-secondary ngdialog-button" ng-click="closeThisDialog()">{{ 'Cancel'|translate }}</button>
+    </div>
+</div>

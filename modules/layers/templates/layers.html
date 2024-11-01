@@ -1,0 +1,5 @@
+<div id="uvisLayers" class="uvisModule" ng-controller="uvisLayersController" ng-class="{'hideArrows':!uvisData.config.uvis_layers_show_layer_controls}">
+    <div id="uvisLayersContainer" nostyle="background-color:{{ uvisData.config.uvis_layers_default_screen_background_color }};"></div>
+</div>
+<div ng-include="uvisPlaylist"></div>
+<div ng-include="uvisFilters"></div>

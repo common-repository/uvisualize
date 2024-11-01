@@ -1,0 +1,53 @@
+<div id="viewPlaylistFilters" ng-controller="uvisPlaylistFiltersController">
+  <div class="spinner uvisTabLoader" ng-show="loading">
+    {{ 'Loading Taxonomies'|translate }}...
+  </div>
+
+  <form name="uvisPlaylistFiltersForm" ng-show="!loading">
+
+    <div ng-show="uvisData.config.uvis_module !== 'timeline'">
+    <h4>{{ 'Filter by timerange'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Let visitors filter the playlist by timerange'|translate }}">?</div></h4>
+    <input id="uvis_filters_timerange_enable" type="checkbox" ng-model="uvisData.config.uvis_filters_timerange_enable" />
+    <label for="uvis_filters_timerange_enable" uvis-tooltip="{{ 'Let visitors filter the playlist items with a timerange widget'|translate }}">{{ 'Show timerange'|translate }}</label>
+    <select id="uvis_filter_by_timerange"
+            ng-model="uvisData.config.uvis_filter_by_timerange"
+            ng-options="value for (key , value) in timerangeOptions"
+            uvis-tooltip="{{ 'Timerange post field'|translate }}"
+            >
+    </select>
+    </div>
+
+    <h4>{{ 'Filter by terms'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Let visitors filter the playlist. Make sure &quot;Show filter panel&quot; is clicked to see the results'|translate }}">?</div></h4>
+
+    <input id="uvis_filters_enable" type="checkbox" ng-model="uvisData.config.uvis_filters_enable" />
+    <label for="uvis_filters_enable" uvis-tooltip="{{ 'Let visitors filter the playlist items'|translate }}">{{ 'Show filter panel'|translate }}</label>
+    <select ng-model="myTaxonomy"
+            ng-options="tax.slug for tax in uvisData.taxonomies"
+            ng-change="changeTax()"
+            required
+            ng-disabled="currentFilter.uvis_filter_by_taxonomy_term_ids.length > 0"
+            uvis-tooltip="{{ 'Select a taxonomy for visitors to filter by'|translate }}">
+        <option value="">-- {{ 'select Taxonomy'|translate }} --</option>
+    </select>
+    <br />
+    <select ng-model="myTaxonomyTerm"
+            ng-options="term.name for term in myTaxonomyTerms | filterterms: currentFilter.uvis_filter_by_taxonomy_term_ids"
+            ng-show="myTaxonomy.slug !== undefined"
+            ng-change="addTerm()"
+            uvis-tooltip="{{ 'Add a term to the filter options'|translate }}">
+        <option value="">-- {{ 'add Term'|translate }} --</option>
+    </select>
+    <br />
+    <!-- <button class="button" ng-disabled="myTaxonomyTerm === undefined" ng-click="addTerm()">Add Term</button> -->
+    <div class="uvisTaxonomyTerms" ng-show="currentFilter.uvis_filter_by_taxonomy">
+    <h4>{{ currentFilter.uvis_filter_by_taxonomy }}</h4>
+        <div ng-model="currentTerms"
+             ng-repeat="term in currentTerms | sortLocale:'name'"
+             class="uvisTaxonomyTermRemove"
+             ng-bind="term.name"
+             ng-click="removeTerm(term.id)"
+             uvis-tooltip="{{ 'Click to remove'|translate }}">
+        </div>
+    </div>
+  </form>
+</div>

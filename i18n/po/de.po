@@ -1,0 +1,857 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Uvisualize!\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: modules/visualizer/templates/add.html:14
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: modules/visualizer/templates/filters_settings.html:37
+msgid "Add a term to the filter options"
+msgstr "Füge einen Begriff als Filteroption hinzu"
+
+#: modules/visualizer/templates/filters_settings.html:38
+msgid "add Term"
+msgstr "Begriff hinzufügen"
+
+#: modules/visualizer/templates/storyeditor.html:9
+msgid "Add visualization description here"
+msgstr "Beschreibe deine Visualisierung"
+
+#: modules/visualizer/templates/playlist_settings.html:35
+msgid "Animation"
+msgstr "Animation"
+
+#: modules/visualizer/js/visualizer.js:1353
+msgid "Audio files"
+msgstr "Audiodateien"
+
+#: modules/map/templates/settings.html:72
+msgid "Auto Zoom Map"
+msgstr "Automatischer Zoom"
+
+#: modules/visualizer/templates/playlist_settings.html:38
+msgid "Auto-animate playlist"
+msgstr "Playlist animieren"
+
+#: modules/visualizer/templates/playlist_settings.html:35
+msgid ""
+"Auto-animate your playlist: Skip automatically from one item to the next one "
+"using a transition effect and a delay"
+msgstr ""
+"Playlist animieren: Lass die Playlist automatisch von einem Beitrag zum "
+"nächsten springen, sobald auf Play gedrückt wird. Wähle einen "
+"Animationseffekt und gib eine Verzögerung in Millisekunden an."
+
+#: modules/visualizer/templates/playlist_settings.html:38
+msgid ""
+"Automatically skip from one playlist item to the next after the delay set "
+"below"
+msgstr ""
+"Automatisch zum nächsten Playlisteintrag springen, sobald die Zeit "
+"verstrichen ist"
+
+#: modules/map/templates/settings.html:72
+msgid "Automatically zoom to all visible markers"
+msgstr "Automatisch alle Marker ins Sichtfeld rücken"
+
+#: modules/visualizer/templates/itemdisplay.html:58
+msgid "Autoplay audios and videos"
+msgstr "Audiodateien und Videos automatisch abspielen"
+
+#: modules/visualizer/templates/playlist_settings.html:19
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: modules/map/templates/settings.html:7
+msgid "Basemap"
+msgstr "Basiskarte"
+
+#: modules/layers/templates/settings.html:29
+#: modules/map/templates/settings.html:40
+msgid "Box background"
+msgstr "Hintergrundfarbe"
+
+#: modules/layers/templates/settings.html:35
+#: modules/map/templates/settings.html:46
+msgid "Box border color"
+msgstr "Rahmenfarbe"
+
+#: modules/visualizer/templates/add.html:15
+#: modules/visualizer/templates/delete.html:9
+#: modules/visualizer/templates/error_popup.html:9
+#: modules/visualizer/templates/visualizer.html:33
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: modules/visualizer/templates/generic.html:28
+msgid ""
+"Change the behaviour and appearance.<br>\n"
+"          Use combination of these settings to fit the purpose of your "
+"presentation. What you see is what you get!"
+msgstr ""
+"Verändere das Verhalten und das Erscheinungsbild.<br>\n"
+"Kombiniere verschiedene Einstellungen, um deine passende Präsentationsform "
+"zu finden. Jede Änderung ist sofort am Bildschirm zu sehen."
+
+#: modules/timeline/templates/settings.html:5
+msgid "Change the behaviour of the timeline"
+msgstr "Verändere das Erscheinungsbild und das Verhalten der Zeitleiste"
+
+#: modules/example/templates/settings.html:3
+msgid "Change the design and behaviour of the Example"
+msgstr "Verändere das Erscheinungsbild und das Verhalten des Beispiels"
+
+#: modules/layers/templates/settings.html:3
+msgid "Change the design and behaviour of the layers"
+msgstr "Verändere das Erscheinungsbild und das Verhalten der Ebenen"
+
+#: modules/map/templates/settings.html:4
+msgid "Change the design and behaviour of the map"
+msgstr "Verändere das Erscheinungsbild und das Verhalten der Karte"
+
+#: modules/layers/templates/settings.html:21
+msgid "Change the design of each layer"
+msgstr "Verändere das Erscheinungsbild einer jeden Ebene"
+
+#: modules/map/templates/settings.html:38
+msgid ""
+"Change the design of the popup which appears after clicking a marker. Make "
+"sure to click on a marker to see the results"
+msgstr ""
+"Verändere das Erscheinungsbild des Fensters, sobald auf einen Marker "
+"geklickt wird. Klick zuerst einen Marker an, um das Ergebnis zu sehen."
+
+#: modules/visualizer/templates/playlist_settings.html:4
+msgid ""
+"Change the design of your playlist. Make sure &quot;Show playlist&quot; is "
+"clicked to see the results"
+msgstr ""
+"Verändere das Erscheinungsbild der Playlist. Aktiviere das Feld \"Playlist "
+"anzeigen\", um die Ergebnisse gleich zu sehen."
+
+#: modules/layers/templates/settings.html:10
+#: modules/layers/templates/settings.html:5
+msgid "Choose an axis. Use horizontal or vertical for a slideshow."
+msgstr ""
+"Wähle eine Achse, auf der sich die Ebenen bewegen. Nimm horizontal oder "
+"vertikal für eine Slideshow."
+
+#: modules/visualizer/templates/itemdisplay.html:48
+msgid "Choose how the attachments should be displayed"
+msgstr "Such dir aus, wie die Mediendateien angezeigt werden sollen."
+
+#: modules/visualizer/templates/generic.html:18
+msgid "Choose your visualization"
+msgstr "Wähle eine passende Visualisierung"
+
+#: modules/visualizer/templates/generic.html:19
+msgid ""
+"Click on a module above and a <span class=\"dashicons dashicons-yes\"></"
+"span> will appear.<br>\n"
+"          It indicates that you selected this module for saving."
+msgstr ""
+"Klicke in der oberen Leiste auf ein Modul und ein <span class=\"dashicons "
+"dashicons-yes\"></span> erscheint<br>\n"
+"Damit hast du dieses Modul zum Speichern ausgewählt."
+
+#: modules/visualizer/templates/metabox.tpl.php:16
+msgid "Click to edit"
+msgstr "Zum Bearbeiten klicken"
+
+#: modules/visualizer/templates/filters_settings.html:49
+msgid "Click to remove"
+msgstr "Klicken zum Entfernen"
+
+#: modules/visualizer/templates/storyeditor.html:46
+msgid "Comment description"
+msgstr "Kommentar"
+
+#: modules/visualizer/templates/storyeditor.html:45
+msgid "Comment title"
+msgstr "Kommentartitel"
+
+#: modules/visualizer/templates/generic.html:27
+msgid "Configure your visualization"
+msgstr "Konfiguriere deine Visualisierung"
+
+#: modules/example/js/example.js:27 modules/layers/js/layers.js:27
+#: modules/map/js/map.js:28 modules/timeline/js/timeline.js:27
+msgid "Content"
+msgstr "Inhalt"
+
+#: modules/visualizer/templates/metabox.tpl.php:20
+msgid "Copy permalink to clipboard"
+msgstr "Permalink in die Zwischenablage kopieren"
+
+#: modules/visualizer/templates/metabox.tpl.php:19
+msgid "Copy shortcode to clipboard"
+msgstr "Shortcode in die Zwischenablage kopieren"
+
+#: modules/visualizer/templates/generic.html:65
+msgid "Create a visualization module"
+msgstr "Erstelle selbst ein Visualisierungsmodul"
+
+#: modules/visualizer/templates/metabox.tpl.php:8
+msgid "Create visualization"
+msgstr "Visualisierung erstellen"
+
+#: modules/visualizer/templates/generic.html:68
+msgid "Created by"
+msgstr "Erstellt von"
+
+#: modules/visualizer/templates/itemdisplay.html:50
+msgid "default"
+msgstr "Standard"
+
+#: modules/visualizer/templates/playlist_settings.html:47
+msgid "Delay (ms)"
+msgstr "Verzögerung (ms)"
+
+#: modules/visualizer/templates/delete.html:8
+msgid "Delete"
+msgstr "Löschen"
+
+#: modules/visualizer/templates/metabox.tpl.php:18
+msgid "Delete visualization"
+msgstr "Visualisierung löschen"
+
+#: modules/visualizer/templates/delete.html:3
+msgid "Delete Visualization?"
+msgstr "Diese Visualisierung löschen?"
+
+#: modules/visualizer/templates/description.html:6
+msgid "Description"
+msgstr "Beschreibung"
+
+#: modules/layers/templates/settings.html:21
+msgid "Design"
+msgstr "Erscheinungsbild"
+
+#: modules/visualizer/templates/generic.html:65
+msgid "Development tutorials"
+msgstr "Entwicklungsanleitungen"
+
+#: modules/visualizer/templates/itemdisplay.html:30
+msgid "Display attached media files at all?"
+msgstr "Angehängte Mediendateien überhaupt anzeigen?"
+
+#: modules/visualizer/templates/itemdisplay.html:43
+msgid "Display attachment type?"
+msgstr "Diesen Medientyp anzeigen?"
+
+#: modules/visualizer/templates/itemdisplay.html:30
+msgid "Display attachments"
+msgstr "Mediendateien anzeigen"
+
+#: modules/visualizer/templates/itemdisplay.html:48
+msgid "Display mode"
+msgstr "Anzeigemodus"
+
+#: modules/visualizer/templates/playlist_settings.html:16
+msgid "Display the backward, play and forward buttons"
+msgstr "Abspielknöpfe (Zurück, Vor, Play) anzeigen?"
+
+#: modules/visualizer/templates/itemdisplay.html:15
+msgid "Display this field to the visitor?"
+msgstr "Soll dem Besucher dieses Feld angezeigt werden?"
+
+#: modules/timeline/templates/settings.html:8
+msgid "Display timeline? (Otherwise slideshow)"
+msgstr "Zeitleiste anzeigen? (Ansonsten Slideshow)"
+
+#: modules/visualizer/js/visualizer.js:1365
+msgid "Documents"
+msgstr "Dokumente"
+
+#: modules/visualizer/templates/filters.html:20
+msgid "Drag me"
+msgstr "Zieh mich"
+
+#: modules/visualizer/templates/storyeditor.html:38
+msgid "Edit post"
+msgstr "Beitrag bearbeiten"
+
+#: modules/visualizer/templates/error.html:3
+msgid "Error"
+msgstr "Fehler"
+
+#: modules/visualizer/templates/nomodule.html:2
+msgid ""
+"Error: No module selected or module not available! Make sure to activate all "
+"modules"
+msgstr ""
+"Fehler: Es wurde kein Modul ausgewählt oder das gespeicherte Modul ist nicht "
+"verfügbar. Stelle sicher, dass alle Module aktiviert sind."
+
+#: modules/example/js/example.js:19 modules/example/js/example.js:23
+#: modules/example/templates/settings.html:3
+msgid "Example"
+msgstr "Beispiel"
+
+#: modules/example/templates/settings.html:5
+msgid "Example Color Setting"
+msgstr "Beispiel Farbauswahl"
+
+#: modules/visualizer/templates/itemdisplay.html:4
+msgid "Fields to show"
+msgstr "Angezeigte Felder"
+
+#: modules/visualizer/templates/filters_settings.html:20
+msgid "Filter by terms"
+msgstr "Nach Begriffen filtern"
+
+#: modules/visualizer/templates/filters_settings.html:9
+msgid "Filter by timerange"
+msgstr "Nach Zeitraum filtern"
+
+#: modules/example/js/example.js:36 modules/layers/js/layers.js:36
+#: modules/map/js/map.js:36 modules/timeline/js/timeline.js:31
+#: modules/visualizer/templates/filters.html:6
+msgid "Filters"
+msgstr "Filter"
+
+#: modules/example/templates/settings.html:11
+#: modules/layers/templates/settings.html:47
+#: modules/map/templates/settings.html:58
+msgid "Font"
+msgstr "Schriftart"
+
+#: modules/layers/templates/settings.html:41
+#: modules/map/templates/settings.html:52
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+#: modules/visualizer/templates/generic.html:65
+msgid "For developers"
+msgstr "Für EntwicklerInnen"
+
+#: modules/visualizer/templates/generic.html:73
+msgid "Funded by"
+msgstr "Gefördert von"
+
+#: modules/visualizer/templates/generic.html:59
+msgid "Help &amp; documentation"
+msgstr "Hilfe & Dokumentation"
+
+#: modules/layers/js/layers.js:58
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: modules/visualizer/templates/generic.html:64
+msgid "How to use?"
+msgstr "Wie funktioniert's?"
+
+#: modules/visualizer/js/visualizer.js:1361
+msgid "Images"
+msgstr "Bilder"
+
+#: modules/map/templates/settings.html:69
+msgid "Initial position"
+msgstr "Ausgangsposition"
+
+#: modules/visualizer/templates/generic.html:36
+msgid "Installed visualization modules"
+msgstr "Installierte Visualisierungsmodule"
+
+#: modules/visualizer/templates/description.html:11
+#: modules/visualizer/templates/storyeditor.html:22
+msgid "Last modified"
+msgstr "Zuletzt geändert"
+
+#: modules/layers/js/layers.js:19 modules/layers/js/layers.js:23
+#: modules/layers/templates/settings.html:3
+msgid "Layers"
+msgstr "Ebenen"
+
+#: modules/layers/templates/settings.html:5
+msgid "Layers axis"
+msgstr "Achse"
+
+#: modules/visualizer/templates/filters_settings.html:9
+msgid "Let visitors filter the playlist by timerange"
+msgstr "Sollen Besucher die Playlist nach Zeitraum filtern können?"
+
+#: modules/visualizer/templates/filters_settings.html:23
+msgid "Let visitors filter the playlist items"
+msgstr "Ermögliche es deinen Besuchern, die Playlist zu filtern"
+
+#: modules/visualizer/templates/filters_settings.html:11
+msgid "Let visitors filter the playlist items with a timerange widget"
+msgstr "Sollen Besucher die Playlist nach Dauer filtern können?"
+
+#: modules/visualizer/templates/filters_settings.html:20
+msgid ""
+"Let visitors filter the playlist. Make sure &quot;Show filter panel&quot; is "
+"clicked to see the results"
+msgstr ""
+"Ermögliche es deinen Besuchern, die Playlist zu filtern. Aktiviere &quot;"
+"Filter anzeigen&quot;, um die Ergebnisse gleich zu sehen."
+
+#: modules/visualizer/templates/filters.html:3
+msgid "Loading Filters"
+msgstr "Lade Filter"
+
+#: modules/visualizer/templates/filters_settings.html:3
+msgid "Loading Taxonomies"
+msgstr "Lade Taxonomien"
+
+#: modules/map/js/map.js:24 modules/map/templates/settings.html:4
+msgid "Map"
+msgstr "Karte"
+
+#: modules/map/templates/settings.html:28
+msgid "Marker color"
+msgstr "Markerfarbe"
+
+#: modules/map/templates/settings.html:17
+msgid "Marker icon"
+msgstr "Markersymbol"
+
+#: modules/visualizer/templates/add.html:6
+msgid "Name your visualization"
+msgstr "Gib deiner Visualisierung einen Namen"
+
+#: modules/visualizer/templates/storyeditor.html:28
+msgid ""
+"Narrate the playlist with your own words. What you write will replace the "
+"original content. Leave the comments field blank to keep the original."
+msgstr ""
+"Erzähle eine Geschichte über deine Sammlung mit deinen eigenen Worten. Was "
+"du schreibst ersetzt in der Anzeige den Originalinhalt ohne ihn tatsächlich "
+"zu überschreiben. Lass einfach die Kommentarfelder leer, um wieder den "
+"Originalinhalt anzuzeigen."
+
+#: modules/visualizer/templates/storyeditor.html:35
+msgid "Number of files"
+msgstr "Anzahl der Dateien"
+
+#: modules/timeline/templates/settings.html:19
+msgid "Order items by"
+msgstr "Beiträge sortieren nach"
+
+#: modules/visualizer/templates/storyeditor.html:21
+msgid "Permalink"
+msgstr "Permalink"
+
+#: modules/layers/templates/settings.html:14
+msgid "Perspective X-axis (percent)"
+msgstr "Perspektive X-Achse (%)"
+
+#: modules/layers/templates/settings.html:17
+msgid "Perspective Y-axis (percent)"
+msgstr "Perspektive Y-Achse (%)"
+
+#: modules/layers/js/layers.js:31 modules/map/js/map.js:32
+#: modules/visualizer/templates/playlist_settings.html:4
+msgid "Playlist"
+msgstr "Playlist"
+
+#: modules/visualizer/templates/description.html:7
+msgid "Please add a description"
+msgstr "Beschreibe deine Visualisierung. Mach Leute neugierig!"
+
+#: modules/visualizer/templates/add.html:8
+#: modules/visualizer/templates/description.html:4
+msgid "Please give a title"
+msgstr "Wähle einen Titel"
+
+#: modules/map/templates/settings.html:38
+msgid "Popup box"
+msgstr "Markerfenster"
+
+#: modules/map/templates/settings.html:75
+msgid "Position"
+msgstr "Position"
+
+#: modules/visualizer/js/visualizer.js:1393
+msgid "Post Content"
+msgstr "Beschreibung"
+
+#: modules/visualizer/js/visualizer.js:1389
+msgid "Post Date"
+msgstr "Veröffentlichungsdatum"
+
+#: modules/visualizer/js/visualizer.js:1397
+msgid "Post Permalink"
+msgstr "Permalink"
+
+#: modules/visualizer/js/visualizer.js:1385
+msgid "Post Title"
+msgstr "Titel"
+
+#: modules/visualizer/templates/generic.html:42
+msgid "Provides the visualization framework and the Story Editor."
+msgstr "Stellt den Story Editor und das Visualisierungsframework bereit."
+
+#: modules/map/templates/settings.html:35
+msgid "Put markers into a cluster if they are very close to each other"
+msgstr "Überlappende Marker automatisch gruppieren"
+
+#: modules/visualizer/js/visualizer.js:1180
+msgid ""
+"Put this shortcode in a post to add a link to this visualization.\n"
+"\n"
+"Copy to clipboard: Ctrl+C, Enter"
+msgstr ""
+"Kopiere diesen Shortcode in die Beitragsbeschreibung, um zu dieser "
+"Visualisierung zu verlinken.\n"
+"\n"
+"In die Zwischenablage kopieren mit: Strg+C, Enter"
+
+#: modules/visualizer/templates/add.html:9
+#: modules/visualizer/templates/description.html:5
+#: modules/visualizer/templates/storyeditor.html:8
+msgid "Required!"
+msgstr "Pflichtfeld!"
+
+#: modules/visualizer/templates/filters.html:8
+msgid "Reset filters"
+msgstr "Filter zurücksetzen"
+
+#: modules/visualizer/templates/visualizer.html:31
+msgid "Save"
+msgstr "Speichern"
+
+#: modules/visualizer/templates/visualizer.html:32
+msgid "Save and Close"
+msgstr "Speichern und schließen"
+
+#: modules/layers/templates/settings.html:23
+msgid "Screen background"
+msgstr "Bildschirmhintergrund"
+
+#: modules/layers/templates/settings.html:29
+msgid "Select a background color for each layer"
+msgstr "Wähle eine Hintergrundfarbe für alle Ebenen"
+
+#: modules/map/templates/settings.html:40
+msgid "Select a background color for each marker popup box"
+msgstr "Wähle eine Hintergrundfarbe für die Markerfenster"
+
+#: modules/visualizer/templates/playlist_settings.html:19
+msgid "Select a background color for the playlist"
+msgstr "Wähle eine Hintergrundfarbe für die Playlist"
+
+#: modules/layers/templates/settings.html:23
+msgid "Select a background color for the whole screen"
+msgstr "Wähle eine Bildschirmhintergrundfarbe"
+
+#: modules/layers/templates/settings.html:35
+msgid "Select a border color for each layer"
+msgstr "Wähle eine Rahmenfarbe für alle Ebenen"
+
+#: modules/map/templates/settings.html:46
+msgid "Select a border color for each marker popup box"
+msgstr "Wähle eine Rahmenfarbe für die Markerfenster"
+
+#: modules/map/templates/settings.html:28
+msgid "Select a color for each marker"
+msgstr "Wähle eine Farbe für Marker"
+
+#: modules/map/templates/settings.html:17
+msgid "Select a default icon for each marker"
+msgstr "Wähle ein Markersymbol"
+
+#: modules/example/templates/settings.html:11
+#: modules/example/templates/settings.html:16
+#: modules/layers/templates/settings.html:47
+#: modules/layers/templates/settings.html:53
+#: modules/map/templates/settings.html:58
+#: modules/map/templates/settings.html:64
+msgid "Select a font"
+msgstr "Wähle eine Schriftfarbe"
+
+#: modules/layers/templates/settings.html:41
+msgid "Select a font color for the each layer"
+msgstr "Wähle eine Schriftart für alle Ebenen"
+
+#: modules/map/templates/settings.html:52
+msgid "Select a font color for the popup box"
+msgstr "Wähle eine Schriftfarbe für die Markerfenster"
+
+#: modules/map/templates/settings.html:13
+#: modules/map/templates/settings.html:7
+msgid "Select a map which fits your presentation best"
+msgstr "Wähle eine Karte, die am besten zur deiner Präsentation passt"
+
+#: modules/visualizer/templates/filters_settings.html:29
+msgid "Select a taxonomy for visitors to filter by"
+msgstr "Wähle eine Taxonomie, nach der Besucher filtern können sollen"
+
+#: modules/visualizer/templates/playlist_settings.html:25
+msgid "Select a text color for the playlist"
+msgstr "Wähle eine Schriftfarbe für die Playlist"
+
+#: modules/example/templates/settings.html:5
+msgid "Select an example color"
+msgstr "Wähle eine Farbe"
+
+#: modules/visualizer/templates/filters_settings.html:30
+msgid "select Taxonomy"
+msgstr "Wähle eine Taxonomie"
+
+#: modules/layers/templates/settings.html:14
+msgid "Set the perspective on the x-axis"
+msgstr "Stelle die Perspektive auf der X-Achse ein"
+
+#: modules/layers/templates/settings.html:17
+msgid "Set the perspective on the y-axis"
+msgstr "Stelle die Perspektive auf der Y-Achse ein"
+
+#: modules/visualizer/templates/visualizer.html:13
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: modules/visualizer/templates/viewer.html:3
+msgid "Share"
+msgstr "Teilen"
+
+#: modules/visualizer/templates/filters_settings.html:23
+msgid "Show filter panel"
+msgstr "Filter anzeigen"
+
+#: modules/visualizer/templates/playlist_settings.html:16
+msgid "Show playback controls"
+msgstr "Abspielknöpfe anzeigen"
+
+#: modules/visualizer/templates/playlist_settings.html:7
+msgid "Show Playlist"
+msgstr "Playlist anzeigen"
+
+#: modules/visualizer/templates/playlist_settings.html:7
+msgid "Show the playlist to the visitor at the selected screen position"
+msgstr "An welcher Bildschirmposition möchtest du die Playlist anzeigen?"
+
+#: modules/visualizer/templates/filters_settings.html:11
+msgid "Show timerange"
+msgstr "Zeitfilter anzeigen"
+
+#: modules/visualizer/templates/playlist_settings.html:47
+msgid ""
+"Skip to the next playlist item after this period of time (if playlist is "
+"auto-animated or after the play button was pressed)"
+msgstr ""
+"Automatisch zum nächsten Playlisteintrag springen, sobald die Verzögerung "
+"abgelaufen ist. Dies trifft nur zu, sobald die Animation aktiviert ist und "
+"der Abspielknopf betätigt wird."
+
+#: modules/visualizer/js/visualizer.js:1170
+#: modules/visualizer/js/visualizer.js:1178
+msgid "Sorry, there was an error, try reloading the page."
+msgstr "Leider ist etwas schief gegangen. Bitte lade die Seite erneut."
+
+#: modules/map/templates/settings.html:35
+msgid "Spiderfy clustered markers"
+msgstr "Marker automatisch gruppieren"
+
+#: modules/timeline/templates/settings.html:11
+msgid "Start by"
+msgstr "Beginnen bei"
+
+#: modules/visualizer/templates/itemdisplay.html:58
+msgid "Start playing audios and videos automatically when they are displayed"
+msgstr ""
+"Audio- und Videodateien automatisch starten, sobald sie angezeigt werden"
+
+#: modules/visualizer/templates/description.html:9
+#: modules/visualizer/templates/metabox.tpl.php:17
+#: modules/visualizer/templates/storyeditor.html:13
+#: modules/visualizer/templates/visualizer.html:30
+msgid "Status"
+msgstr "Status"
+
+#: modules/visualizer/js/visualizer.js:28
+#: modules/visualizer/templates/storyeditor.html:5
+msgid "Story Editor"
+msgstr "Story Editor"
+
+#: modules/visualizer/templates/generic.html:8
+msgid "Tell your story"
+msgstr "Erzähle deine Geschichte"
+
+#: modules/visualizer/templates/storyeditor.html:29
+msgid "Tell your story!"
+msgstr "Erzähle deine Geschichte!"
+
+#: modules/visualizer/templates/playlist_settings.html:25
+msgid "Text color"
+msgstr "Schriftfarbe"
+
+#: modules/map/templates/settings.html:69
+msgid ""
+"The map will start at the same position and zoom level in which you save it. "
+"Drag the map to the initial position and zoom level you want the "
+"presentation to start with and press Save."
+msgstr ""
+"Die Karte startet an jener Position und mit jenem Zoomgrad, der beim "
+"Speichern eingestellt war. Ziehe die Karte auf eine neue Position und klicke "
+"auf Speichern, um die Ausgangsposition zu verändern."
+
+#: modules/visualizer/js/visualizer.js:1173
+msgid ""
+"This is your visualization's permalink.\n"
+"\n"
+"Copy to clipboard: Ctrl+C, Enter"
+msgstr ""
+"Das ist der Permalink zu deiner Visualisierung\n"
+"\n"
+"In die Zwischenablage kopieren mit: Strg+C, Enter"
+
+#: modules/visualizer/templates/playlist.html:17
+#: modules/visualizer/templates/storyeditor.html:37
+msgid "This post has geo data"
+msgstr "Dieser Beitrag hat Geodaten"
+
+#: modules/timeline/js/timeline.js:19 modules/timeline/js/timeline.js:23
+#: modules/timeline/templates/settings.html:5
+msgid "Timeline"
+msgstr "Zeitleiste"
+
+#: modules/visualizer/templates/filters_settings.html:15
+msgid "Timerange post field"
+msgstr "Filtern auf Basis von diesem Datum"
+
+#: modules/visualizer/templates/description.html:3
+msgid "Title"
+msgstr "Titel"
+
+#: modules/visualizer/templates/playlist_settings.html:41
+msgid "Transition effect"
+msgstr "Übergangseffekt"
+
+#: modules/visualizer/templates/generic.html:9
+msgid ""
+"Use the Story Editor to describe your playlist items and narrate your own "
+"story of the content presented.<br>\n"
+"          What you write will replace the original post content shown to the "
+"visitor."
+msgstr ""
+"Verwende den Story Editor um eine Geschichte über deine Sammlung zu erzählen."
+"<br>\n"
+"Was du schreibst ersetzt in der Anzeige den originalen Inhalt."
+
+#: modules/layers/js/layers.js:59
+msgid "Vertical"
+msgstr "Vertikal"
+
+#: modules/visualizer/templates/generic.html:64
+msgid "Video tutorial"
+msgstr "Videoanleitung"
+
+#: modules/visualizer/js/visualizer.js:1357
+msgid "Videos"
+msgstr "Videos"
+
+#: modules/visualizer/templates/metabox.tpl.php:21
+msgid "View visualization as visitor"
+msgstr "Visualisierung als Besucher ansehen"
+
+#: modules/visualizer/templates/storyeditor.html:7
+msgid "Visualization Title"
+msgstr "Titel der Visualisierung"
+
+#: modules/visualizer/templates/playlist_settings.html:41
+msgid "When skipping to a playlist item this transition effect will be used"
+msgstr ""
+"Sobald die Playlist zum nächsten Beitrag springt, wird dieser "
+"Übergangseffekt verwendet"
+
+#: modules/visualizer/templates/playlist_settings.html:11
+msgid "Where to display the playlist?"
+msgstr "Wo soll die Playlist angezeigt werden?"
+
+#: modules/timeline/templates/settings.html:8
+msgid "Whether to display the timeline or just a slideshow"
+msgstr "Möchten Sie die Zeitleiste anzeigen oder lediglich eine Slideshow?"
+
+#: modules/visualizer/templates/itemdisplay.html:4
+msgid ""
+"Which content do you want to display to the visitor? Make sure you are "
+"viewing an item to see the results"
+msgstr ""
+"Welche Inhalte möchtest du deinen Besuchern anzeigen? Klicke zuerst einen "
+"Beitrag an, um die Ergebnisse gleich zu sehen"
+
+#: modules/visualizer/templates/itemdisplay.html:19
+msgid ""
+"Which media files do you want to display to the visitor? Make sure you are "
+"viewing an item to see the results"
+msgstr ""
+"Welche Mediendateien möchtest du deinen Besuchern anzeigen? Klicke zuerst "
+"einen Beitrag an, um die Ergebnisse gleich zu sehen"
+
+#: modules/map/templates/settings.html:79
+msgid "Zoom level"
+msgstr "Zoomgrad"
+
+#~ msgid "No taxonomy or terms selected"
+#~ msgstr "Noch keine Begriffe zum Filter hinzugefügt."
+
+#~ msgid ""
+#~ "{{ uvisData.config.uvis_filters[0].uvis_filter_by_taxonomy || 'No "
+#~ "taxonomy or terms selected' }}<div class=\"uvisFilterClear\" ng-click="
+#~ "\"filterClear()\"><span class=\"dashicons dashicons-dismiss\" uvis-"
+#~ "tooltip=\"{{ 'Reset filters'|translate }}\"></span></div>"
+#~ msgstr "Noch keine Begriffe zum Filter hinzugefügt"
+
+#~ msgid "Auto animate {{ uvis_playlist_post_type_name_singular }}"
+#~ msgstr "Playlist animieren"
+
+#~ msgid "Show {{ uvis_playlist_post_type_name_singular }}"
+#~ msgstr "Zeige"
+
+#~ msgid "Select a background color for each popup box"
+#~ msgstr "Wähle eine Hintergrundfarbe für die Markerfenster"
+
+#~ msgid "Select a border color for each popup box"
+#~ msgstr "Wähle eine Rahmenfarbe für die Markerfenster"
+
+#~ msgid "Select a fontcolor for the popup box"
+#~ msgstr "Wähle eine Schriftfarbe alle Ebenen"
+
+#~ msgid "Auto animate playlist"
+#~ msgstr "Playlist animieren"
+
+#~ msgid "Show playlist"
+#~ msgstr "Playlist anzeigen"
+
+#~ msgid ""
+#~ "Present your posts as overlaying layers on a three dimensional timeline "
+#~ "or as a horizontal or vertical slideshow."
+#~ msgstr ""
+#~ "Präsentieren Sie Ihre Beiträge in 3D oder als horizontale oder vertikale "
+#~ "Slideshow."
+
+#~ msgid ""
+#~ "Present your posts on a map. Add geo data to posts using a geo tagging "
+#~ "plugin in order to display them on a map.<br>\n"
+#~ "      The <span class=\"dashicons dashicons-location\"></span>-symbol "
+#~ "indicates that a post has geo data."
+#~ msgstr ""
+#~ "Präsentieren Sie Ihre Beiträge auf einer Landkarte. Fügen Sie zuerst "
+#~ "Geodaten hinzu, um Sie auf der Karte anzuzeigen.<br>\n"
+#~ "Das <span class=\"dashicons dashicons-location\"></span>-Symbol zeigt an, "
+#~ "dass dieser Beitrag bereits Geodaten hat."
+
+#~ msgid "Present your posts on a timeline."
+#~ msgstr "Präsentieren Sie Ihre Beiträge auf einer  Zeitleiste."
+
+#~ msgid ""
+#~ "Click on a module above and a <span class=\"dashicons dashicons-yes\"></"
+#~ "span> will appear.<br />It indicates that you selected this module for "
+#~ "saving."
+#~ msgstr ""
+#~ "Klicken Sie in der oberen Leiste auf ein Modul und ein <span "
+#~ "class=dashicons dashicons-yes></span> erscheint.\n"
+#~ "Es zeigt an, dass Sie dieses Modul zum Speichern ausgewählt haben."

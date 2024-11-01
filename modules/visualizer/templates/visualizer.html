@@ -1,0 +1,35 @@
+<div class="uvisWrap ngdialog-message" uvis-layout ng-controller="uvisPopup">
+    <div class="uvisHeader">
+        <h1 ng-click="onClickTab()" class="uvisHeaderTitle">UVisualize!</h1>
+        <h4 class="nav-tab-wrapper uvisTabMenu">
+            <a ng-repeat="tab in tabs"
+               ng-class="{'button button-module button-{{tab.id}}':true, 'button button-module button-{{tab.id}} active':isActiveTab(tab.url)}"
+               ng-click="onClickTab(tab)"
+               href ><span ng-show="isActiveModule(tab.id)">&#10003; </span><span ng-bind="tab.title" translate></span></a>
+        </h4>
+    </div>
+    <div class="uvisBody modal-body">
+        <div class="uvisTabFloating" uvis-draggable="{'handle': '.uvisFloatingHeader'}" ng-show="tabsSecondary.length > 0">
+            <h3 class="uvisFloatingHeader"><span translate>Settings</span><div class="uvisTabMinimize dashicons dashicons-minus" ng-click="uvisMinimizeTab=!uvisMinimizeTab"></div></h3>
+            <h4 class="nav-tab-wrapper uvisTabMenuSecondary" ng-class="{hidden:uvisMinimizeTab,show:!uvisMinimizeTab}">
+                <a ng-repeat="tab in tabsSecondary"
+                   ng-class="{'nav-tab':true, 'nav-tab-active':isActiveTabSecondary(tab.url)}"
+                   ng-click="onClickTabSecondary(tab)"
+                   href >{{ tab.title | translate }}</a>
+            </h4>
+            <div class="uvisTabSecondary" ng-class="{hidden:uvisMinimizeTab,show:!uvisMinimizeTab}">
+                <div ng-include="currentTabSecondary"></div>
+            </div>
+        </div>
+        <div class="uvisTabBody">
+            <div class="uvisTab" ng-include="currentTab"></div>
+        </div>
+    </div>
+
+    <div class="uvisFooter ngdialog-buttons">
+        <span class="uvisFooterPostStatus">{{ 'Status'|translate }}: {{ uvisData.config.uvis_post_status }}</span>
+        <button class="button button-primary" ng-click="save()">{{ 'Save'|translate }}</button>
+        <button class="button button-primary" ng-click="save(true)">{{ 'Save and Close'|translate }}</button>
+        <button class="button button-secondary ngdialog-button" ng-click="closeThisDialog()">{{ 'Cancel'|translate }}</button>
+    </div>
+</div>

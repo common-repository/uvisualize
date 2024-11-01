@@ -1,0 +1,67 @@
+<div ng-controller="uvisLayersSettingsController">
+
+  <h4>{{ "Layers"|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Change the design and behaviour of the layers'|translate }}">?</div></h4>
+
+  <label for="uvis_layers_axis" uvis-tooltip="{{ 'Choose an axis. Use horizontal or vertical for a slideshow.'|translate }}">{{ 'Layers axis'|translate }}</label>
+  <select id="uvis_layers_axis"
+        ng-model="uvisData.config.uvis_layers_axis"
+        ng-options="value as name for (value, name) in layersAxis"
+        ng-change="changeRenderMode()"
+        uvis-tooltip="{{ 'Choose an axis. Use horizontal or vertical for a slideshow.'|translate }}"
+        >
+  </select>
+  <br />
+  <label 
+    ng-class="{'disabled': uvisData.config.uvis_layers_axis !== 'z'}"
+    uvis-tooltip="{{ 'Set the perspective on the x-axis'|translate }}">{{ 'Perspective X-axis (percent)'|translate }}</label>
+  <input 
+    ng-disabled="uvisData.config.uvis_layers_axis !== 'z'"
+    type="number" step="5" min="-200" max="200" id="" ng-change="changeRenderMode()" ng-model="uvisData.config.uvis_layers_originX" />
+  <br />
+  <label 
+    ng-class="{'disabled': uvisData.config.uvis_layers_axis !== 'z'}"
+    uvis-tooltip="{{ 'Set the perspective on the y-axis'|translate }}">{{ 'Perspective Y-axis (percent)'|translate }}</label>
+  <input 
+    ng-disabled="uvisData.config.uvis_layers_axis !== 'z'"
+    type="number" step="5" min="-200" max="200" id="" ng-change="changeRenderMode()" ng-model="uvisData.config.uvis_layers_originY" />
+  <br />
+  <input id="showarrows" type="checkbox" ng-model="uvisData.config.uvis_layers_show_layer_controls">
+  <label for="showarrows" uvis-tooltip="{{ 'Show layers next and previous controls'|translate }}">{{ 'Show layer controls'|translate }}</label>
+  <br />
+
+  <h4>{{ 'Design'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Change the design of each layer'|translate }}">?</div></h4>
+
+  <label uvis-tooltip="{{ 'Select a background color for the whole screen'|translate }}">{{ 'Screen background'|translate }}</label>
+  <div class="colorPickerField">
+    <input uvis-colorpicker type="text" id="uvis_layers_default_screen_background_color" ng-model="uvisData.config.uvis_layers_default_screen_background_color" ng-change="updateLayersColor()" class="colorPicker" />
+  </div>
+  <br />
+
+  <label uvis-tooltip="{{ 'Select a background color for each layer'|translate }}">{{ 'Box background'|translate }}</label>
+  <div class="colorPickerField">
+    <input uvis-colorpicker type="text" id="uvis_layers_default_box_background_color" ng-model="uvisData.config.uvis_layers_default_box_background_color" ng-change="updateLayersColor()" class="colorPicker" />
+  </div>
+  <br />
+
+  <label uvis-tooltip="{{ 'Select a border color for each layer'|translate }}">{{ 'Box border color'|translate }}</label>
+  <div class="colorPickerField">
+    <input uvis-colorpicker type="text" id="uvis_layers_default_box_border_color" ng-model="uvisData.config.uvis_layers_default_box_border_color" ng-change="updateLayersColor()" class="colorPicker" />
+  </div>
+  <br />
+
+  <label uvis-tooltip="{{ 'Select a font color for the each layer'|translate }}">{{ 'Font color'|translate }}</label>
+  <div class="colorPickerField">
+    <input uvis-colorpicker type="text" id="uvis_layers_default_box_font_color" ng-model="uvisData.config.uvis_layers_default_box_font_color" ng-change="updateLayersColor()" class="colorPicker" />
+  </div>
+  <br />
+
+  <label for="uvis_layers_default_box_font" uvis-tooltip="{{ 'Select a font'|translate }}">{{ 'Font'|translate }}</label>
+  <select
+    id="uvis_layers_default_box_font"
+    ng-model="uvisData.config.uvis_layers_default_box_font"
+    ng-options="value for (key , value) in mapFonts"
+    ng-change="updateLayersColor()"
+    uvis-tooltip="{{ 'Select a font'|translate }}"
+  ></select>
+
+</div>

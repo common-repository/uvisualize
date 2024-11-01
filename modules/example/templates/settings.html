@@ -1,0 +1,32 @@
+<!-- 
+    Angular base template for the visualization settings.
+    Uses "uvisExampleSettingsController" as defined in js/example.js
+-->
+<div ng-controller="uvisExampleSettingsController">
+  <!-- 
+    You can use angular translate markup for i18n if needed.
+    "uvis-tooltip" is a directive to show help texts on hover.
+  -->
+  <h4>{{ "Example"|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Change the design and behaviour of the Example'|translate }}">?</div></h4>
+  <!-- 
+    Custom setting example with Colorpicker:
+  -->
+  <label uvis-tooltip="{{ 'Select an example color'|translate }}">{{ 'Example Color Setting'|translate }}</label>
+  <div class="colorPickerField">
+    <input uvis-colorpicker type="text" id="uvis_example_color" ng-model="uvisData.config.uvis_example_color" class="colorPicker" ng-change="updateColors()" />
+  </div>
+  <br />
+
+  <!-- 
+    Custom setting example with Fontpicker:
+  -->
+  <label for="uvis_example_default_font" uvis-tooltip="{{ 'Select a font'|translate }}">{{ 'Font'|translate }}</label>
+  <select
+    id="uvis_example_default_box_font"
+    ng-model="uvisData.config.uvis_example_default_font"
+    ng-options="value for (key , value) in fonts"
+    uvis-tooltip="{{ 'Select a font'|translate }}"
+    ng-change="changeFont(uvisData.config.uvis_example_default_font)"
+  ></select>
+
+</div>

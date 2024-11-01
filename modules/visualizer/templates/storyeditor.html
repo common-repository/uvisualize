@@ -1,0 +1,57 @@
+<div id="uvisStoryEditor" ng-controller="uvisStoryEditorController">
+
+  <form name="uvisDescription" class="uvisDescription clearfix">
+
+    <h1>{{ 'Story Editor'|translate }}</h1>
+
+    <input id="uvisTitle" name="uvisTitle" type="text" ng-model="uvisData.config.uvis_post_title" required placeholder="{{ 'Visualization Title'|translate }}" />
+    <span class="error" ng-show="uvisSettings.uvisTitle.$error.required">{{ 'Required!'|translate }}</span><br>
+    <textarea id="uvisDescription" name="uvisDescription" class="uvisDescription" type="text" ng-model="uvisData.config.uvis_post_content" required placeholder="{{ 'Add visualization description here'|translate }}"></textarea>
+
+    <div class="uvisPostStatus">
+      <div>
+          <label for="uvis_post_status">{{ 'Status'|translate }}: </label>
+          <select id="uvis_post_status"
+              ng-model="uvisData.config.uvis_post_status"
+              ng-options="value for (key , value) in uvisPoststatus"
+              >
+          </select>
+      </div>
+      <div>&nbsp;</div>
+      <div class="aligncenter"><label for="uvis_post_permalink">{{ 'Permalink'|translate }}:</label> <input type="text" value="{{ uvisData.config.uvis_post_permalink }}" id="uvis_post_permalink" onclick="javascript:this.select();" size="30" /></div>
+      <div class="alignright">{{ 'Last modified'|translate }}: {{ uvisData.config.uvis_post_modified || "missing" }}</div>
+    </div>
+  </form>
+
+  <div class="uvisStoryItems">
+
+    <div class="uvisHelp" uvis-tooltip="{{ 'Narrate the playlist with your own words. What you write will replace the original content. Leave the comments field blank to keep the original.'|translate }}">?</div>
+    <h2>{{ 'Tell your story!'|translate }}</h2>
+
+    <div class="uvisStoryItem" ng-repeat="item in PLItems">
+      <div class="uvisStoryItemProps" id="uvisProps-{{ item.ID }}">
+        <div class="uvisStoryButtons">
+            <span class="uvisStoryItemMediaCount {{ count.type }}" ng-repeat="count in item.mediacount">
+                <span ng-show="count.count > 0"><span ng-class="{true:'dashicons dashicons-format-{{count.type}}', false:'dashicons dashicons-media-document'}['{{count.type}}'!='document']" uvis-tooltip="{{ 'Number of files'|translate }}: {{ count.count}} {{ count.type }}"></span></span>
+            </span>
+            <span class="uvisMapMarkerSmall dashicons dashicons-location" ng-show="item.geo_latitude" uvis-tooltip="{{ 'This post has geo data'|translate }}"></span>
+            <a href="../wp-admin/post.php?post={{ item.ID }}&amp;action=edit" target="_blank" class="dashicons dashicons-edit" alt="{{ 'Edit post'|translate }}" uvis-tooltip="{{ 'Edit post'|translate }}"></a>
+        </div>
+        <div class="uvisStoryItemTitle">{{ item.post_title }}</div>
+        <div class="uvisStoryItemContent" ng-bind-html="item.post_contentHTML"></div>
+      </div>
+      <div class="uvisStoryboardItemConf triangle-border left">
+          <form name="{{ item.ID }}form">
+            <input class="uvisStoryItemCommentTitle" id="{{ item.ID }}title" type="text" ng-model="item.title" required placeholder="{{ 'Comment title'|translate }}"><br />
+            <textarea class="uvisStoryItemCommentDescription" id="{{ item.ID }}comment" ng-model="item.comment" required placeholder="{{ 'Comment description'|translate }}"></textarea>
+          </form>
+      </div>
+      <div class="clearboth"></div>
+    </div>
+    <!--<div class="debug">
+      <div ng-repeat="geo in uvisData.items" ng-show="geo.geo_latitude">[{{ geo.geo_latitude }}, {{ geo.geo_longitude }}]</div>
+    </div>-->
+
+  </div>
+
+</div>

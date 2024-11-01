@@ -1,0 +1,10 @@
+<div class="uvisWrap ngdialog-message uvisViewer" uvis-layout ng-controller="uvisViewer">
+    <div class="uvisHeader">
+        <h1>{{ uvisData.config.uvis_post_title }}</h1>
+    </div>
+    <div class="uvisBody modal-body">
+        <div class="uvisTabBody">
+            <div class="uvisTab" ng-include="currentTab"></div>
+        </div>
+    </div>
+</div>

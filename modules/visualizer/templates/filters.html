@@ -1,0 +1,21 @@
+<div class="uvisPlaylistFilter clearfix" uvis-draggable ng-show="uvisData.config.uvis_filters_enable" ng-controller="uvisFiltersController">
+  <div class="spinner uvisTabLoader" ng-show="loading">
+    {{ 'Loading Filters'|translate }}...
+  </div>
+  <div ng-show="!loading">
+    <div class="uvisPlaylistFilterHandle uvisDraggableHandle">{{ 'Filters'|translate }}<div class="uvisTabMinimize dashicons dashicons-minus" ng-click="uvisMinimizeTab=!uvisMinimizeTab"></div></div>
+      <div class="uvisPlaylistFilterItems" ng-class="{hidden:uvisMinimizeTab,show:!uvisMinimizeTab}">
+        <h5>{{ uvisData.config.uvis_filters[0].uvis_filter_by_taxonomy || 'No taxonomy or terms selected' }}<div class="uvisFilterClear" ng-click="filterClear()"><span class="dashicons dashicons-dismiss" uvis-tooltip="{{ 'Reset filters'|translate }}"></span></div></h5>
+        <div ng-repeat="tax in getTaxonomyTermsByIds(uvisData.config.uvis_filters[0].uvis_filter_by_taxonomy_term_ids) | sortLocale:'term'">
+          <div class="uvisPlaylistFilterItem"
+               ng-click="filterMod(tax.id)"
+               ng-class="{'active':filterIsOn(tax.id)}">{{ tax.term }}</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="uvisFilterDaterange" uvis-refresh-daterange uvis-draggable ng-controller="uvisFiltersController" ng-if="uvisData.config.uvis_filters_timerange_enable && uvisData.config.uvis_module != 'timeline'">
+    <div class="uvisDaterange" uvis-daterange ng-if="uvisData.config.uvis_filters_timerange_enable"></div>
+    <div class="uvisDaterangeHeader uvisDraggableHandle"><div class="uvisButtonMove" uvis-tooltip="{{ 'Drag me'|translate }}"></div></div>
+</div>

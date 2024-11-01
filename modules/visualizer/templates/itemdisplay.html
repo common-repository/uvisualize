@@ -1,0 +1,65 @@
+<div>
+  <form name="uvisSettings">
+
+    <h4>{{ 'Fields to show'|translate }}<div class="uvisHelp" uvis-tooltip="{{ 'Which content do you want to display to the visitor? Make sure you are viewing an item to see the results'|translate }}">?</div></h4>
+
+    <div ng-repeat="field in filters_show_fields">
+        <input
+          id="uvis_field_{{field.id}}"
+          type="checkbox"
+          name="selectedFields[]"
+          value="{{field.id}}"
+          ng-checked="uvisData.config.uvis_filters_show_fields.indexOf(field.id) > -1"
+          ng-click="toggleFieldSelection(field.id)"
+        />
+      <label for="uvis_field_{{field.id}}" uvis-tooltip="{{ 'Display this field to the visitor?'|translate }}">{{ field.title|translate }}</label><br />
+    </div>
+    <br />
+
+    <h4>Attachment display<div class="uvisHelp" uvis-tooltip="{{ 'Which media files do you want to display to the visitor? Make sure you are viewing an item to see the results'|translate }}">?</div></h4>
+
+    <fieldset>
+      <legend>
+        <input
+          id="uvis_attachment_display"
+          type="checkbox"
+          ng-model="uvisData.config.uvis_attachment_display"
+          ng-checked="uvisData.config.uvis_attachment_display > 0"
+          ng-change="toggleAttachmentDisplay()"/>
+        <label
+          for="uvis_attachment_display" uvis-tooltip="{{ 'Display attached media files at all?'|translate }}">{{ 'Display attachments'|translate }}</label>
+      </legend>
+
+      <div ng-repeat="mtype in mediatypes">
+          <input
+            id="uvis_mtype_{{mtype.id}}"
+            type="checkbox"
+            name="selectedMediatypes[]"
+            value="{{mtype.id}}"
+            ng-class="{ 'disabled':!uvisData.config.uvis_attachment_display }"
+            ng-checked="uvisData.config.uvis_attachment_show_mediatypes.indexOf(mtype.id) > -1"
+            ng-click="toggleMediatypeSelection(mtype.id)"
+          >
+          <label
+            for="uvis_mtype_{{mtype.id}}" 
+            uvis-tooltip="{{ 'Display attachment type?'|translate }}"
+            ng-class="{ 'disabled':!uvisData.config.uvis_attachment_display }">{{ mtype.title|translate }}</label><br />
+      </div>
+    </fieldset>
+    <br />
+<!-- Not implemented yet
+    <label for="uvis_attachment_display_mode" uvis-tooltip="{{ 'Choose how the attachments should be displayed'|translate }})">{{ 'Display mode'|translate }}</label>
+    <select id="uvis_attachment_display_mode" ng-model="uvisData.config.uvis_attachment_display_mode">
+      <option value="default">{{ 'default'|translate }}</option>
+    </select>
+    <br />
+-->
+    <div ng-show="uvisData.config.uvis_module!=='timeline'">
+        <input
+          id="uvis_attachment_autoplay"
+          type="checkbox"
+          ng-model="uvisData.config.uvis_attachment_autoplay" />
+        <label for="uvis_attachment_autoplay" uvis-tooltip="{{ 'Start playing audios and videos automatically when they are displayed'|translate }}">{{ 'Autoplay audios and videos'|translate }}</label>
+    </div>
+  </form>
+</div>
